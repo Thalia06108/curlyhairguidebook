@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<!--As you recommended in my proposal feedback, having images & description on the main page works better. Images as well as name of products are on the homepage, with the products' description, rating, and review on a seperate page. 
+Although I love your suggestion on more pages on styling curly hair and tips. My website is soley a review on productsand information on those products. Although, I have now included youtube videos for each product demonstarting various things like how its used or hairstyles done with them. 
+Recovering Points:
+banner=image map
+more content on subpages
+links to home & guide pages work from other pages
+link to home page from subpages 
+
+1)JavaScript used to change element style on About.htm for H3.
+2)Javascript used to produce some effect on Credits.htm based on randomness.
+3)JavaScript used to validate form on Contact.htm.
+4)JavaScript used to change text "Let's Chat!" based on user action on Contact.htm
+5)Javascript used to change images on rollover on About.htm.
+6)Javascript animation on index.htm for h3, CurlyHairGuideBook.
+QUERY Effect: Table of products on index.htm --- hovering over each product the background color changes, like a highlighting effect.
+--> 
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+<style type="text/css">
+
+  body {
+    background-color: aqua;
+}
+</style>
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript">
+
+	function changeColor()
+		{
+			var myH3 = document.getElementById("title");
+			if (myH3.style.color == "black") myH3.style.color="gold";
+			else myH3.style.color="white";
+			setTimeout("changeColor()",500);
+		}	
+		
+			$(function(){
+		$("td").mouseover(function(){
+			$(this).css("background-color","gold");
+		});
+		});
+
+        $(function(){
+		$("td").mouseout(function(){
+			$(this).css("background-color","aqua");
+		});
+		});
+		
+	</script>
+
+<title>CurlyHairGuideBook</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
+</head>
+
+<body>
+<audio autoplay> <source src="bensound-buddy.mp3" type="audio/mpeg" /></audio> 
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    
+    <map name="banner" id="tree">
+    <area shape="rect" coords="6, 72, 421,377" href="contact.htm" alt="spot" />
+ <area shape="rect" coords="441, 11, 1257,373" href="about.htm" alt="spot2" />
+</map>
+    <img src="banner.jpg" width="200%" height="350" usemap="#banner" alt="picture"/>
+  
+      <a class="navbar-brand" href="index.htm"><h3 align="center"id="title" style="color:black" onmouseover="changeColor()">Curly Hair Guidebook</h3></a>
+    </div>
+   
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.htm"> HomePage</a></li>
+      <li><a href="About.htm">About Me</a></li>
+      <li><a href="Contact.htm">Contact Me</a></li>
+      <li><a href="Credits.htm">Credits</a></li>
+    </ul>
+
+
+<iframe align="left" width="199%" height="450" src="https://www.youtube.com/embed/d3E7kmevnyg" frameborder="2" allowfullscreen></iframe> 
+</div>
+ 
+ <table align="center" width="100%" border="1" cellpadding="10">
+  <tbody>
+    <tr>
+      <th scope="col">Curly</th>
+      <th scope="col">Hair</th>
+      <th scope="col">Products</th>
+    </tr>
+    <tr>
+      <td> <img src="palmers.jpg" width="200" height="150" alt="palmers"/><a href="Palmers.htm">Palmers: Olive Oil Deep Conditioner</a></td>
+      <td><img src="wetline.jpg" width="200" height="150" alt="wetline"/><a href="Wetline.htm">Wetline Extreme: Professional Styling Gel</a></td>
+      <td><img src="ogx.jpg" width="200" height="150" alt=""/><a href="ogx.htm">OGX: Argan Oil</a></td>
+    </tr>
+    <tr>
+      <td><img src="cantu.jpg" width="200" height="150" alt="cantu"/><a href="cantu.htm">Cantu Shea Butter: Moisturizing Curl Activator Cream</a></td>
+        <td><img src="aussie.jpg" width="200" height="150" alt="aussie"/><a href="aussie.htm">Aussie: 3 Minute Miracle-Moist</a></td>
+      <td><img src="shea.jpg" width="200" height="150" alt="shea"/><a href="shea.htm">Shea Moisture: Coconut and Hibiscus Curl & Style Milk</a></td>
+    </tr>
+    <tr>
+    <td><img src="kinky.jpg" width="200" height="150" alt="kinky"/><a href="kinky.htm">Kinky Curly: Knot Today Leave in/Detangler</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</nav>
+</body>
+</html>

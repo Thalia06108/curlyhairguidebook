@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+	h1 {text-align:center;
+	}	
+	body {
+    background-color: aqua;
+}
+	</style>
+    
+<script type="text/javascript">
+function seeText()
+{
+document.getElementById("heading").style.color = "red";
+}
+
+function chgPic()
+{
+document.getElementById("thal").src="downArrow.gif";
+}
+function chgBack()
+{
+document.getElementById("thal").src="thalia.jpg";
+}
+</script>
+<title>About Me</title>
+</head>
+
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Curly Hair Guidebook</a>
+    </div>
+   
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.htm">Home</a></li>
+      <li><a href="About.htm">About Me</a></li>
+      <li><a href="Contact.htm">Contact Me</a></li>
+      <li><a href="Credits.htm">Credits</a></li>
+    </ul>
+  </nav>
+</div>
+<p> <img src="thalia.jpg" id="thal" alt="arrow" onmouseover="chgPic()" onmouseout="chgBack()"/>
+
+
+  <h1> Hello curly hair people! I am your fellow curly hair gal, Thalia. My website is an information hub on various curly hair products**. I share with you all my personal reviews as well as ratings on each product. I understand the struggle of finding the right products to keep my curls healthy and yet styled. That is why I want to share some of my knowledge with others and even discover more products to incorporate into my hair care routine. </h1>
+<h3 id="heading" onMouseOver="seeText()">**All products posted on this site were used for a duration of at least one week, before writing a review.</h3>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<style type="text/css">
+body {
+    background-color: aqua;
+}
+</style>
+<script type="text/javascript">
+function chgText() {
+document.getElementById("header").innerHTML = "What's Going on?";
+}
+function sendForm()
+	{
+		var jsform=document.getElementById("formy");
+	
+		if (jsform.emails.value == "")
+		{
+			alert("Email is required");
+			jsform.emails.focus();
+		}
+else 
+		{
+			return true;
+		}
+		return false;
+	}
+</script>
+
+<title>Contact Me</title>
+</head>
+
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Curly Hair Guidebook</a>
+    </div>
+   
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.htm">Home</a></li>
+      <li><a href="About.htm">About Me</a></li>
+      <li><a href="Contact.htm">Contact Me</a></li>
+      <li><a href="Credits.htm">Credits</a></li>
+    </ul>
+    </div>
+  </nav>
+
+
+<h1 id="header" onMouseOver="chgText()">Let's Chat!</h1>
+<form method="post" action="mailer.php" id="formy" onsubmit="return sendForm()">
+<p>Email:
+<input type="text" name="name:" maxlength="300" id="emails"/>
+</p>
+<p>Purpose:
+Question <input type="radio" name="male" value="male" />
+Comment <input type="radio" name="female" value="female" />
+</p>
+<p>Type away in the box below.</p>
+<p><textarea name="feedback" rows="4" cols="38"></textarea></p>
+<table>
+<tr>
+<td><input type="submit" value="Submit" name="Submit" /></td>
+<td><input type="reset" value="Reset" name="Reset" /></td>
+</tr>
+</table>
+</form>
+
+</body>
+</html>
